@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	require('functions.php');
-	//isConnected();
+	isConnected();
 ?>
 <html>
 	<head>
@@ -16,6 +16,9 @@
 			<input placeholder="Login" type="text" name="login">
 			<input placeholder="Mot de passe" type="password" name="pwd">
 			<input type="submit" value="Inscrire">
+		</form>
+		<form method="post" action="index.php">
+			<input type="submit" value="Accueil">
 		</form>
 		<?php
 			if(filesize("users.csv")>0){
